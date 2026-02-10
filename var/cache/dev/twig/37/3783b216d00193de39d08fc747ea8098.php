@@ -45,19 +45,56 @@ class __TwigTemplate_12a9672a781af47d605559e78840eb50 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "product/_form.html.twig"));
 
         // line 1
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start');
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start', ["attr" => ["class" => "needs-validation"]]);
         yield "
-    ";
-        // line 2
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
+<div class=\"card card-body shadow-sm\" style=\"max-width:900px;margin:0 auto;border-radius:12px;\">
+    <div class=\"row g-3 mb-3\">
+        <div class=\"col-md-6\">
+            ";
+        // line 5
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 5, $this->source); })()), "nom", [], "any", false, false, false, 5), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Nom du produit"]]);
         yield "
-    <button class=\"btn\">";
-        // line 3
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Save")) : ("Save")), "html", null, true);
+        </div>
+        <div class=\"col-md-6\">
+            ";
+        // line 8
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 8, $this->source); })()), "prix", [], "any", false, false, false, 8), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Prix"]]);
+        yield "
+        </div>
+    </div>
+
+    <div class=\"mb-3\">
+        ";
+        // line 13
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), "description", [], "any", false, false, false, 13), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Description", "rows" => 4]]);
+        yield "
+    </div>
+
+    <div class=\"row g-3 mb-3\">
+        <div class=\"col-md-6\">
+            ";
+        // line 18
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "stock", [], "any", false, false, false, 18), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Stock"]]);
+        yield "
+        </div>
+        <div class=\"col-md-6\">
+            ";
+        // line 21
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "image", [], "any", false, false, false, 21), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Image URL"]]);
+        yield "
+        </div>
+    </div>
+
+    <div class=\"d-grid\">
+        <button class=\"btn btn-primary btn-lg\">";
+        // line 26
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 26, $this->source); })()), "Save")) : ("Save")), "html", null, true);
         yield "</button>
+    </div>
+</div>
 ";
-        // line 4
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form_end');
+        // line 29
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), 'form_end');
         yield "
 ";
         
@@ -90,14 +127,39 @@ class __TwigTemplate_12a9672a781af47d605559e78840eb50 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  60 => 4,  56 => 3,  52 => 2,  48 => 1,);
+        return array (  97 => 29,  91 => 26,  83 => 21,  77 => 18,  69 => 13,  61 => 8,  55 => 5,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
-        return new Source("{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class=\"btn\">{{ button_label|default('Save') }}</button>
+        return new Source("{{ form_start(form, {'attr': {'class': 'needs-validation'}}) }}
+<div class=\"card card-body shadow-sm\" style=\"max-width:900px;margin:0 auto;border-radius:12px;\">
+    <div class=\"row g-3 mb-3\">
+        <div class=\"col-md-6\">
+            {{ form_row(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Nom du produit'}}) }}
+        </div>
+        <div class=\"col-md-6\">
+            {{ form_row(form.prix, {'attr': {'class': 'form-control', 'placeholder': 'Prix'}}) }}
+        </div>
+    </div>
+
+    <div class=\"mb-3\">
+        {{ form_row(form.description, {'attr': {'class': 'form-control', 'placeholder': 'Description', 'rows': 4}}) }}
+    </div>
+
+    <div class=\"row g-3 mb-3\">
+        <div class=\"col-md-6\">
+            {{ form_row(form.stock, {'attr': {'class': 'form-control', 'placeholder': 'Stock'}}) }}
+        </div>
+        <div class=\"col-md-6\">
+            {{ form_row(form.image, {'attr': {'class': 'form-control', 'placeholder': 'Image URL'}}) }}
+        </div>
+    </div>
+
+    <div class=\"d-grid\">
+        <button class=\"btn btn-primary btn-lg\">{{ button_label|default('Save') }}</button>
+    </div>
+</div>
 {{ form_end(form) }}
 ", "product/_form.html.twig", "C:\\Users\\driss\\Desktop\\Pink\\PinkShield\\templates\\product\\_form.html.twig");
     }

@@ -97,17 +97,21 @@ class __TwigTemplate_8e77939f2367680c07073ec2e535b898 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Create new Product</h1>
+        yield "    <div class=\"container\">
+        <div class=\"card\" style=\"padding:24px;border-radius:14px;\">
+            <h2 class=\"mb-3\">Create new Product</h2>
 
-    ";
-        // line 8
+            ";
+        // line 10
         yield Twig\Extension\CoreExtension::include($this->env, $context, "product/_form.html.twig");
         yield "
 
-    <a href=\"";
-        // line 10
+            <a href=\"";
+        // line 12
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_product_index");
-        yield "\">back to list</a>
+        yield "\" class=\"btn btn-link mt-3\">Back to list</a>
+        </div>
+    </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -139,7 +143,7 @@ class __TwigTemplate_8e77939f2367680c07073ec2e535b898 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  109 => 10,  104 => 8,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  111 => 12,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -149,11 +153,15 @@ class __TwigTemplate_8e77939f2367680c07073ec2e535b898 extends Template
 {% block title %}New Product{% endblock %}
 
 {% block body %}
-    <h1>Create new Product</h1>
+    <div class=\"container\">
+        <div class=\"card\" style=\"padding:24px;border-radius:14px;\">
+            <h2 class=\"mb-3\">Create new Product</h2>
 
-    {{ include('product/_form.html.twig') }}
+            {{ include('product/_form.html.twig') }}
 
-    <a href=\"{{ path('app_product_index') }}\">back to list</a>
+            <a href=\"{{ path('app_product_index') }}\" class=\"btn btn-link mt-3\">Back to list</a>
+        </div>
+    </div>
 {% endblock %}
 ", "product/new.html.twig", "C:\\Users\\driss\\Desktop\\Pink\\PinkShield\\templates\\product\\new.html.twig");
     }

@@ -90,3 +90,17 @@ c090f4,127.0.0.1,GET,http://127.0.0.1:8000/back/img/undraw_empty.svg,1770749824,
 66c41f,127.0.0.1,GET,http://127.0.0.1:8000/product/new,1770749829,,200,request
 de6f44,127.0.0.1,POST,http://127.0.0.1:8000/product/new,1770749846,,422,request
 755929,127.0.0.1,POST,http://127.0.0.1:8000/product/new,1770749857,,422,request
+2a5c75,127.0.0.1,GET,http://127.0.0.1:8000/product,1770750241,,200,request
+0df7dc,127.0.0.1,GET,http://127.0.0.1:8000/back/img/undraw_empty.svg,1770750242,2f8d9b,404,request
+2f8d9b,127.0.0.1,GET,http://127.0.0.1:8000/back/img/undraw_empty.svg,1770750242,,404,request
+4ee99e,127.0.0.1,GET,http://127.0.0.1:8000/product/new,1770750245,,200,request
+804588,127.0.0.1,GET,http://127.0.0.1:8000/admin/appointments,1770750423,,200,request
+cbf3e4,127.0.0.1,GET,http://127.0.0.1:8000/product,1770750427,,200,request
+fad5ca,127.0.0.1,GET,http://127.0.0.1:8000/back/img/undraw_empty.svg,1770750427,540dca,404,request
+540dca,127.0.0.1,GET,http://127.0.0.1:8000/back/img/undraw_empty.svg,1770750428,,404,request
+cd382d,127.0.0.1,GET,http://127.0.0.1:8000/admin/appointments,1770750454,,200,request
+6a016f,127.0.0.1,GET,http://127.0.0.1:8000/login,1770750460,,302,request
+80b356,127.0.0.1,GET,http://127.0.0.1:8000/dashboard,1770750461,,200,request
+21b915,127.0.0.1,GET,http://127.0.0.1:8000/appointments/new,1770750464,,200,request
+37e284,127.0.0.1,GET,http://127.0.0.1:8000/dashboard,1770750467,,200,request
+4853ee,127.0.0.1,GET,http://127.0.0.1:8000/appointments/new,1770750471,,200,request

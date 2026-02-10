@@ -1,0 +1,38 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="auth-box">
+            <div class="card">
+                <div class="brand">
+                    <div class="logo"><img src="/images/transparent-logo.png" alt="PinkShield" class="logo-img" width="56" height="56" loading="lazy"></div>
+                    <div class="title">PinkShield</div>
+                </div>
+
+                {% for label, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="flash-{{ label }}">{{ message }}</div>
+                    {% endfor %}
+                {% endfor %}
+
+                {% if error %}
+                    <div class="flash-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <form action="{{ path('app_login') }}" method="post">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="_username" value="{{ last_username }}" required autofocus>
+
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="_password" required>
+
+                    <button class="btn" type="submit">SE CONNECTER</button>
+                </form>
+
+                <div class="link-muted">Pas encore inscrit? <a href="{{ path('app_register') }}">Créer un compte</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}Gestion Parapharmacie - PinkShield{% endblock %}
+
+{% block body %}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Catalogue Herboristerie</h1>
+        <a href="{{ path('app_product_new') }}" class="btn btn-primary shadow-sm">
+            <i class="fas fa-plus fa-sm text-white-50"></i> Ajouter un produit
+        </a>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Liste des herbes et produits</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prix</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for product in products %}
+                        <tr>
+                            <td>{{ product.nom }}</td>
+                            <td>{{ product.prix }} DT</td>
+                            <td>{{ product.stock }}</td>
+                            <td>
+                                <a href="{{ path('app_product_edit', {'id': product.id}) }}" class="btn btn-sm btn-info">Modifier</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr><td colspan="4">Aucun produit trouvé.</td></tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

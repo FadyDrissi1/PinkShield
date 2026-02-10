@@ -1,0 +1,42 @@
+<style>
+    :root { 
+      --pink-primary: #d63384; 
+      --pink-hover: #e83e8c;
+      --pink-light: #fdf2f7; 
+    }
+
+    /* Remplacer le bleu du menu par le rose PinkShield */
+    .bg-gradient-primary {
+        background-color: var(--pink-primary) !important;
+        background-image: linear-gradient(180deg, var(--pink-primary) 10% , var(--pink-hover) 100%) !important;
+    }
+
+    /* Logo en haut à gauche dans la sidebar */
+    .sidebar-brand {
+        background-color: white !important; /* Fond blanc pour faire ressortir le logo */
+        height: auto !important;
+        padding: 1rem 0 !important;
+    }
+
+    .sidebar-brand img {
+        max-height: 80px; /* Taille du logo ajustée */
+        width: auto;
+    }
+
+    /* Boutons et éléments actifs */
+    .btn-primary {
+        background-color: var(--pink-primary) !important;
+        border-color: var(--pink-primary) !important;
+    }
+    
+    .sidebar-dark .nav-item.active .nav-link i {
+        color: white !important;
+    }
+</style>
+
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ path('admin_dashboard') }}">
+    <div class="sidebar-brand-icon">
+        {# Chemin vers ton logo réel #}
+        <img src="{{ asset('images/colored-logo.png') }}" alt="PinkShield Logo">
+    </div>
+</a>

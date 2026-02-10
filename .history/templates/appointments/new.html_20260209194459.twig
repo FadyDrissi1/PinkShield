@@ -1,0 +1,45 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Nouveau Rendez-vous{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card shadow-sm border-0" style="border-radius: 20px;">
+                <div class="card-body p-5">
+                    <h2 class="mb-4 text-center" style="color: var(--pink-primary); font-weight: 800;">
+                        Prendre un Rendez-vous
+                    </h2>
+                    
+                    {# novalidate désactive la validation HTML5 pour tester ta validation SERVEUR #}
+                    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                        
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Docteur</label>
+                            {{ form_widget(form.doctorname, {'attr': {'class': 'form-control form-control-lg', 'style': 'border-radius: 10px;'}}) }}
+                            <div class="text-danger mt-1 small">{{ form_errors(form.doctorname) }}</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Date & Heure</label>
+                            {{ form_widget(form.date, {'attr': {'class': 'form-control form-control-lg', 'style': 'border-radius: 10px;'}}) }}
+                            <div class="text-danger mt-1 small">{{ form_errors(form.date) }}</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Motif de la consultation</label>
+                            {{ form_widget(form.motif, {'attr': {'class': 'form-control', 'style': 'border-radius: 10px;', 'placeholder': 'Décrivez vos symptômes...'}}) }}
+                            <div class="text-danger mt-1 small">{{ form_errors(form.motif) }}</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-pink w-100 py-3 shadow-sm mt-3" style="font-weight: 700; font-size: 1.1rem;">
+                            Confirmer la demande
+                        </button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 p-4" style="border-radius: 15px;">
+                <h2 class="text-center mb-4" style="color: #d63384;">Prendre un rendez-vous</h2>
+                
+                {{ form_start(form) }}
+                    <div class="mb-3">
+                        {{ form_label(form.date, 'Date et heure du rendez-vous', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.date, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form_label(form.motif, 'Motif de consultation', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.motif, {'attr': {'class': 'form-control', 'placeholder': 'Ex: Contrôle annuel'}}) }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form_label(form.doctorname, 'Médecin souhaité', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.doctorname, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn text-white" style="background-color: #d63384; border-radius: 20px;">Confirmer le rendez-vous</button>
+                        <a href="{{ path('appointments') }}" class="btn btn-outline-secondary" style="border-radius: 20px;">Annuler</a>
+                    </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

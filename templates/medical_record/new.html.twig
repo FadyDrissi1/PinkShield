@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="card shadow-sm border-0 p-4" style="border-radius: 15px;">
+        <h2 class="mb-4" style="color: #d63384;">Créer un Dossier Médical</h2>
+        
+        {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Nom du Patient</label>
+                    {{ form_widget(form.patientName, {'attr': {'class': 'form-control', 'placeholder': 'Nom complet'}}) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Groupe Sanguin</label>
+                    {{ form_widget(form.bloodType, {'attr': {'class': 'form-control', 'placeholder': 'Ex: A+'}}) }}
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Diagnostic</label>
+                {{ form_widget(form.diagnosis, {'attr': {'class': 'form-control', 'rows': '3'}}) }}
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Prescription</label>
+                {{ form_widget(form.prescription, {'attr': {'class': 'form-control', 'rows': '3'}}) }}
+            </div>
+            
+            {# form_rest génère les jetons de sécurité CSRF indispensables #}
+            {{ form_rest(form) }}
+
+            <div class="mt-4">
+                <button class="btn text-white" style="background-color: #d63384; border-radius: 20px;">Enregistrer le dossier</button>
+                <a href="{{ path('medical_records') }}" class="btn btn-outline-secondary" style="border-radius: 20px;">Retour</a>
+            </div>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

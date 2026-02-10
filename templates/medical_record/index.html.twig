@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dossiers Médicaux{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="card shadow-sm border-0 p-4" style="border-radius: 15px;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 style="color: #d63384;">Dossiers Médicaux</h2>
+            <a href="{{ path('medical_record_new') }}" class="btn text-white" style="background-color: #d63384; border-radius: 20px;">
+                + Nouveau Dossier
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Patient</th>
+                        <th>Groupe Sanguin</th>
+                        <th>Dernière visite</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for record in records %}
+                    <tr>
+                        <td><strong>{{ record.patientName }}</strong></td>
+                        <td><span class="badge bg-info text-dark">{{ record.bloodType }}</span></td>
+                        <td>{{ record.updatedAt|date('d/m/Y') }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary">Consulter</button>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4" class="text-center text-muted">Aucun dossier trouvé.</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

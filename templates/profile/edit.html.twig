@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Éditer le profil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card">
+            <h2>Modifier mes informations</h2>
+
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="flash-{{ label }}">{{ message }}</div>
+                {% endfor %}
+            {% endfor %}
+
+            <form method="post">
+                <label for="firstName">Prénom</label>
+                <input id="firstName" name="firstName" value="{{ user.firstName }}">
+
+                <label for="lastName">Nom</label>
+                <input id="lastName" name="lastName" value="{{ user.lastName }}">
+
+                <label for="phone">Téléphone</label>
+                <input id="phone" name="phone" value="{{ user.phone }}">
+
+                <label for="gender">Genre</label>
+                <select id="gender" name="gender">
+                    <option value="">--</option>
+                    <option value="male" {% if user.gender == 'male' %}selected{% endif %}>Homme</option>
+                    <option value="female" {% if user.gender == 'female' %}selected{% endif %}>Femme</option>
+                    <option value="other" {% if user.gender == 'other' %}selected{% endif %}>Autre</option>
+                </select>
+
+                <button class="btn" type="submit">Sauvegarder</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="dashboard-wrap">
+            <aside class="sidebar card">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="{{ path('dashboard') }}">Tableau de bord</a></li>
+                    <li><a href="{{ path('appointments') }}">Rendez-vous</a></li>
+                    <li><a href="{{ path('profile') }}">Mon profil</a></li>
+                    <li><a href="{{ path('forum') }}">Communauté</a></li>
+                    <li><a href="{{ path('notifications') }}">Notifications</a></li>
+                    <li>--- Santé ---</li>
+                    <li><a href="{{ path('health_habits') }}">Habitudes quotidiennes</a></li>
+                    <li><a href="{{ path('health_sleep') }}">Sommeil</a></li>
+                    <li><a href="{{ path('health_activities') }}">Activités physiques</a></li>
+                    <li><a href="{{ path('health_stress') }}">Stress</a></li>
+                    <li><a href="{{ path('health_emotions') }}">Émotions & bien-être</a></li>
+                </ul>
+            </aside>
+
+            <main class="content card">
+                <div class="brand" style="justify-content:flex-start;margin-bottom:12px">
+                    <div class="logo"><img src="/images/transparent-logo.png" alt="PinkShield" class="logo-img" width="56" height="56" loading="lazy"></div>
+                    <div class="title">PinkShield</div>
+                </div>
+                <h1>Bonjour, {{ app.user ? app.user.userIdentifier : 'invité' }}!</h1>
+                <p>Bienvenue dans votre tableau de bord PinkShield.</p>
+
+                <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px">
+                    <div style="padding:12px;border-radius:8px;background:#fff">Stats & graphiques (placeholder)</div>
+                    <div style="padding:12px;border-radius:8px;background:#fff">Rappels & notifications (placeholder)</div>
+                    <div style="padding:12px;border-radius:8px;background:#fff">Consulter un médecin</div>
+                    <div style="padding:12px;border-radius:8px;background:#fff">Modifier informations personnelles</div>
+                </div>
+
+                <form action="{{ path('app_logout') }}" method="post" style="margin-top:18px">
+                    <button class="btn" type="submit">Se déconnecter</button>
+                </form>
+            </main>
+        </div>
+    </div>
+{% endblock %}

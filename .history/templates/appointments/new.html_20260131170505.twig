@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau rendez-vous{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card">
+            <h2>Prendre un rendez-vous</h2>
+            <form method="post">
+                <label for="date">Date et heure</label>
+                <input id="date" name="date" type="datetime-local">
+
+                <label for="reason">Motif</label>
+                <input id="reason" name="reason" type="text">
+
+                <button class="btn" type="submit">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

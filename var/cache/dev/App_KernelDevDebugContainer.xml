@@ -11,7 +11,7 @@
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.build_dir">C:\Users\driss\Desktop\Pink\PinkShield\var\cache\dev</parameter>
     <parameter key="kernel.cache_dir">C:\Users\driss\Desktop\Pink\PinkShield\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\Users\driss\Desktop\Pink\PinkShield/var/log</parameter>
+    <parameter key="kernel.logs_dir">C:\Users\driss\Desktop\Pink\PinkShield\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
@@ -78,7 +78,7 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
-    <parameter key="kernel.share_dir">C:\Users\driss\Desktop\Pink\PinkShield/var/share/dev</parameter>
+    <parameter key="kernel.share_dir">C:\Users\driss\Desktop\Pink\PinkShield\var\share\dev</parameter>
     <parameter key=".container.known_envs" type="collection">
       <parameter>dev</parameter>
       <parameter>test</parameter>
@@ -634,7 +634,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:\Users\driss\Desktop\Pink\PinkShield/var/share/dev/http_cache</argument>
+      <argument>C:\Users\driss\Desktop\Pink\PinkShield\var\share\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -1749,7 +1749,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument/>
       <argument>0</argument>
-      <argument>C:\Users\driss\Desktop\Pink\PinkShield/var/share/dev/pools/app</argument>
+      <argument>C:\Users\driss\Desktop\Pink\PinkShield\var\share\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -7659,7 +7659,7 @@
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
       <tag name="kernel.reset" method="reset"/>
-      <argument>C:\Users\driss\Desktop\Pink\PinkShield/var/log/dev.log</argument>
+      <argument>C:\Users\driss\Desktop\Pink\PinkShield\var\log/dev.log</argument>
       <argument>debug</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -10712,7 +10712,7 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>qJO7TRMw1D</argument>
       <argument>0</argument>
-      <argument>C:\Users\driss\Desktop\Pink\PinkShield/var/share/dev/pools/app</argument>
+      <argument>C:\Users\driss\Desktop\Pink\PinkShield\var\share\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -10761,7 +10761,7 @@
     <service id="cache.messenger.restart_workers_signal.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>GYGyDctcMb</argument>
       <argument>0</argument>
-      <argument>C:\Users\driss\Desktop\Pink\PinkShield/var/share/dev/pools/app</argument>
+      <argument>C:\Users\driss\Desktop\Pink\PinkShield\var\share\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -10770,7 +10770,7 @@
     <service id="cache.http_client.pool.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>oQCCGnKxXb</argument>
       <argument>0</argument>
-      <argument>C:\Users\driss\Desktop\Pink\PinkShield/var/share/dev/pools/app</argument>
+      <argument>C:\Users\driss\Desktop\Pink\PinkShield\var\share\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
